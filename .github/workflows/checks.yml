@@ -1,0 +1,39 @@
+name: Checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install Android build dependencies
+        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Build and lint
+        run: ./gradlew assembleDebug lintDebug --console=plain
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FirePresenter-debug-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+  presenter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm test
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Presenter-test-screenshots
+          path: test-results/

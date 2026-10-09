@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #101827; color: #f6f4ee; font-family: Arial, sans-serif; }
+[hidden] { display: none !important; }
+button { font: inherit; cursor: pointer; color: inherit; }
+button:focus, [role="link"]:focus, #pptx [tabindex]:focus { outline: 4px solid #ff943d; outline-offset: 5px; }
+#home { height: 100%; padding: 4vh 7vw; display: flex; flex-direction: column; justify-content: center; }
+#home h1 { font-size: clamp(30px, 4.8vw, 64px); margin: 0 0 8px; letter-spacing: -.035em; }
+.spark { color: #ff943d; margin-left: 15px; }
+#home p { font-size: clamp(15px, 1.7vw, 24px); line-height: 1.4; margin: 8px 0 20px; color: #c4cddd; }
+#home .eyebrow { font-size: clamp(12px, 1.1vw, 16px); color: #ff943d; letter-spacing: .14em; margin-bottom: 8px; }
+.choices { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 1060px; }
+.choices button { padding: 19px; text-align: left; background: #1e2d43; border: 2px solid #405370; border-radius: 10px; font-size: clamp(18px, 2vw, 28px); }
+.choices button small { display: block; font-size: clamp(12px, 1.25vw, 18px); color: #c4cddd; margin-top: 8px; }
+.choices button:hover { background: #2a3b54; }
+.choices button:disabled { opacity: .4; cursor: default; }
+#home .fine { font-size: clamp(12px, 1.2vw, 18px); margin-top: 22px; margin-bottom: 10px; }
+#home .offline { font-size: clamp(12px, 1.15vw, 17px); max-width: 1060px; margin: 0; }
+.offline strong { color: #f6f4ee; font-weight: normal; }
+.screen { position: absolute; inset: 0; }
+#bundled { display: flex; align-items: center; justify-content: center; background: #090e16; }
+#slide { position: relative; flex: none; }
+#poster { width: 100%; height: 100%; display: block; }
+#film { position: absolute; background: #000; object-fit: contain; }
+#links { position: absolute; inset: 0; pointer-events: none; }
+.hotspot { position: absolute; pointer-events: auto; border: 2px solid transparent; border-radius: 8px; background: transparent; }
+.hotspot:hover { background: #ffffff12; border-color: #ff943d; }
+#pptx { overflow: hidden; display: flex; align-items: center; justify-content: center; background: #090e16; }
+#status { position: absolute; left: 3vw; right: 3vw; bottom: 11vh; font-size: clamp(16px, 1.7vw, 25px); text-align: center; padding: 14px 20px; border-radius: 8px; background: #101827ee; pointer-events: none; z-index: 5; }
+#toolbar { position: absolute; bottom: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: center; gap: 14px; background: #101827f5; padding: 18px; z-index: 6; }
+#toolbar button, #receive button { border: 1px solid #71829b; background: #1e2d43; padding: 11px 20px; border-radius: 6px; font-size: 20px; }
+#count { min-width: 85px; text-align: center; }
+#receive { padding: 7vh 7vw; background: #101827; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+#receive h1 { font-size: clamp(30px, 4vw, 58px); margin: 0 0 20px; }
+#receive p { font-size: clamp(18px, 2vw, 28px); max-width: 1000px; line-height: 1.4; }
+#address { font-family: monospace; overflow-wrap: anywhere; user-select: all; }
+@media(max-height: 500px) { .choices button { padding: 12px; } #home .fine { margin-top: 14px; } }

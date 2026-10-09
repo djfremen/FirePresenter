@@ -1,0 +1,15 @@
+{
+  "name": "firepresenter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Offline Fire TV presentation platform",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/presenter.test.mjs",
+    "fixtures": "node scripts/create-pptx-demo.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "pptxgenjs": "4.0.1"
+  }
+}

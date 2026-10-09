@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FirePresenter</title>
+  <link rel="stylesheet" href="presenter.css">
+</head>
+<body>
+  <section id="home">
+    <p class="eyebrow">LOCAL DECKS · TV REMOTE · OPEN SOURCE</p>
+    <h1>FirePresenter<span class="spark">▸</span></h1>
+    <p>Your presentation, ready when the room is.</p>
+    <div class="choices">
+      <button id="start">Try the demo<small>Graphics, clickable slides, and an embedded video</small></button>
+      <button id="open">Open a PowerPoint file<small>Choose a .pptx from device storage</small></button>
+      <button id="resume">Last imported deck<small>Stored on this device for offline playback</small></button>
+      <button id="send">Receive a deck<small>Transfer a .pptx over local Wi-Fi</small></button>
+    </div>
+    <p class="fine">Left / Right: slides · Up / Down: select a link · OK: follow link or play video · Menu: controls</p>
+    <p class="offline">Launching without internet? <strong>Settings → Applications → Manage Installed Applications → FirePresenter → Launch application</strong></p>
+  </section>
+  <section id="bundled" class="screen" hidden>
+    <div id="slide"><img id="poster" alt=""><video id="film" playsinline preload="metadata" hidden></video><div id="links"></div></div>
+  </section>
+  <section id="pptx" class="screen" hidden></section>
+  <section id="receive" class="screen" hidden>
+    <h1>Send a deck to your TV</h1>
+    <p>Open this address on a phone or computer on the same local Wi-Fi. Choose a .pptx file up to 64 MB.</p>
+    <p id="address">Starting the file receiver…</p>
+    <p>The deck stays on this device. Internet is not needed for transfer or playback.</p>
+    <button id="cancel">Return to FirePresenter</button>
+  </section>
+  <div id="status" role="status" hidden></div>
+  <nav id="toolbar" aria-label="Presentation controls" hidden>
+    <button id="prev">Previous</button><span id="count"></span><button id="next">Next</button>
+    <button id="play">Play / Pause</button><button id="homeButton">Deck menu</button>
+  </nav>
+  <script src="presenter.js"></script>
+</body>
+</html>

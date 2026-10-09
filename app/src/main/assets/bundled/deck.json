@@ -1,0 +1,104 @@
+{
+  "title": "FirePresenter demo",
+  "width": 1920,
+  "height": 1080,
+  "slides": [
+    {
+      "title": "Welcome",
+      "image": "bundled/01-welcome.svg"
+    },
+    {
+      "title": "Clickable menu",
+      "image": "bundled/02-menu.svg",
+      "links": [
+        {
+          "label": "Graphics",
+          "slide": 3,
+          "x": 0.07291666666666667,
+          "y": 0.4074074074074074,
+          "width": 0.4479166666666667,
+          "height": 0.10648148148148148
+        },
+        {
+          "label": "Embedded video",
+          "slide": 4,
+          "x": 0.07291666666666667,
+          "y": 0.5462962962962963,
+          "width": 0.4479166666666667,
+          "height": 0.10648148148148148
+        },
+        {
+          "label": "Finish",
+          "slide": 6,
+          "x": 0.07291666666666667,
+          "y": 0.6851851851851852,
+          "width": 0.4479166666666667,
+          "height": 0.10648148148148148
+        }
+      ]
+    },
+    {
+      "title": "Graphics",
+      "image": "bundled/03-graphics.svg",
+      "links": [
+        {
+          "label": "Return to menu",
+          "slide": 2,
+          "x": 0.07291666666666667,
+          "y": 0.6851851851851852,
+          "width": 0.4479166666666667,
+          "height": 0.10648148148148148
+        }
+      ]
+    },
+    {
+      "title": "Embedded video",
+      "image": "bundled/04-video.svg",
+      "video": "bundled/demo.mp4",
+      "poster": "bundled/video-poster.png",
+      "advanceOnEnd": true,
+      "videoRect": {
+        "x": 0.16666666666666666,
+        "y": 0.3888888888888889,
+        "width": 0.6666666666666666,
+        "height": 0.4444444444444444
+      }
+    },
+    {
+      "title": "Holding slide",
+      "image": "bundled/05-hold.svg",
+      "links": [
+        {
+          "label": "Return to menu",
+          "slide": 2,
+          "x": 0.07291666666666667,
+          "y": 0.5925925925925926,
+          "width": 0.4479166666666667,
+          "height": 0.10648148148148148
+        },
+        {
+          "label": "Finish",
+          "slide": 6,
+          "x": 0.07291666666666667,
+          "y": 0.7314814814814815,
+          "width": 0.4479166666666667,
+          "height": 0.10648148148148148
+        }
+      ]
+    },
+    {
+      "title": "Finish",
+      "image": "bundled/06-finish.svg",
+      "links": [
+        {
+          "label": "Explore again",
+          "slide": 2,
+          "x": 0.07291666666666667,
+          "y": 0.7129629629629629,
+          "width": 0.4479166666666667,
+          "height": 0.10648148148148148
+        }
+      ]
+    }
+  ]
+}
